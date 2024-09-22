@@ -12,10 +12,10 @@ export class CalculatorService {
   public subResultText = signal('0');
   public lastOperator = signal('+');
 
-  public contructNumber(value: string): void {
+  public constructNumber(value: string): void {
     //validar input
     if (![...numbers, ...operators, ...specials].includes(value)) {
-      console.log(value, 'is not a valid input');
+      // console.log(value, 'is not a valid input');
       return;
     }
 
@@ -36,7 +36,7 @@ export class CalculatorService {
     // Backspace
     // TODO: revisar cuando tengamos números negativos
     if (value === 'Backspace') {
-      console.log('Borrar último caracter');
+      // console.log('Borrar último caracter');
       if (this.resultText() === '0') return;
       if (this.resultText().includes('-') && this.resultText().length === 2) {
         this.resultText.set('0');

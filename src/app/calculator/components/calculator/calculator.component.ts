@@ -32,7 +32,7 @@ export class CalculatorComponent {
     // }
 
     handleClick(key: string) {
-        this.calculaterService.contructNumber(key);
+        this.calculaterService.constructNumber(key);
     }
 
     // @HostListener('document:keyup', ['$event'])
